@@ -8,22 +8,21 @@ import android.widget.EditText;
 
 public class Register extends AppCompatActivity {
 
+    //widget variables
+    EditText firstNameEditText;
+    EditText lastNameEditText;
+    EditText emailEditText;
+    EditText passwordEditText;
+    Button registerBtn;
+    Button loginBtn;
+
+    //boolean used to check fields
+    boolean valid = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-
-        EditText firstNameEditText;
-        EditText lastNameEditText;
-        EditText emailEditText;
-        EditText passwordEditText;
-        Button registerBtn;
-        Button loginBtn;
-
-        //boolean used to check fields
-        boolean valid = true;
-
 
         firstNameEditText = findViewById(R.id.firstNameEditText);
         lastNameEditText = findViewById(R.id.lastNameEditText);
@@ -52,6 +51,8 @@ public class Register extends AppCompatActivity {
         {
             valid = true;
         }
+
+        return valid;
     }
 
 }
